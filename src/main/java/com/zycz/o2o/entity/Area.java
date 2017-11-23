@@ -1,6 +1,8 @@
 package com.zycz.o2o.entity;
 
 import java.util.Date;
+
+import com.alibaba.fastjson.JSONObject;
 /**
  * 区域类
  * @author yu.zhang
@@ -57,5 +59,8 @@ public class Area {
 	public void setLastEditTime(Date lastEditTime) {
 		this.lastEditTime = lastEditTime;
 	}
-
+	@Override
+	public String toString(){
+		return JSONObject.toJSONString(this);
+	}
 }

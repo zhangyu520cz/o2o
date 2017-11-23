@@ -14,7 +14,7 @@
     <!-- 配置数据库连接池 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="${jdbc.driver}"/>
-        <property name="jdbcUrl" value="${jbbc.url}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
         <property name="user" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
         <!-- c3p0连接池私有属性-->
@@ -41,7 +41,7 @@
     <!-- 配置扫描Dao包，注入到spring容器中 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- dao包下的接口，spring会自动扫描 -->
-        <property name="basePackage" value="com.zycz.o2o"/>
+        <property name="basePackage" value="com.zycz.o2o.dao"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
     <!-- 开启扫描service相关bean -->
